@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Product Search</title>
+</head>
+
+<body>
+
+  <picture class=""><img scr="no-image.png" alt=""></picture>
+
+  <div class="container">
+    <form class="search">
+      <input type="search" class="search__area" placeholder="Write name of movie, series, anime etc.">
+      <input type="button" class="search__btn btn" value="Search">
+    </form>
+
+    <ul class="movie-list">
+    </ul>
+
+    <input type="button" value="Show more!" class="show-more btn hide">
+
+    <div class="list-loader hide">
+      <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+
+  </div>
+  <div class="modal hide">
+    <div class="modal__body">
+      <picture class="modal__poster"></picture>
+      <div class="modal__about about">
+        <p class="about__title">*Title name*</p>
+        <p class="about__info">
+          <span class="about__rated">*info*</span> <span class="about__year"></span> <span class="about__genre"></span>
+        </p>
+        <p class="about__plot">*Short description*</p>
+        <p><strong>Writer:</strong> <span class="about__writer"></span></p>
+        <p><strong>Directed by:</strong> <span class="about__director"></span></p>
+        <p"><strong>Starring:</strong> <span class="about__actors"></span></p>
+          <p><strong>BoxOffice:</strong> <span class="about__boxOffice"></span></p>
+          <p><strong>Awards:</strong> <span class="about__awards"></span></p>
+          <ul class="about__ratings"><strong>Ratings:</strong>
+
+          </ul>
+      </div>
+    </div>
+    <div class="modal__loader hide">
+      <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
