@@ -94,7 +94,7 @@ const getData = async () => {
 const showMovie = () => {
   if (action === 'search') getS('.movie-list').innerHTML = '';
   for (const movie of movieList) {
-    movie.Poster = movie.Poster === 'N/A' ? 'no-image.png' : movie.Poster;
+    movie.Poster = movie.Poster == 'N/A' ? 'no-image.png' : movie.Poster;
 
     const li = document.createElement('LI');
     const poster = `<picture class="movie__poster"><img scr="" alt="${movie.Title}"></picture>`;
@@ -113,7 +113,7 @@ const showMovie = () => {
   }
 };
 
-// showing the product info modal
+// showing the product info modal 
 getS('.movie-list').addEventListener('click', e => {
   if (e.target.nodeName === 'INPUT') showModal(e);
 })
@@ -124,7 +124,7 @@ const showModal = e => {
   getS('.container').classList.add('gray');
   getS('.modal').classList.remove('hide');
   document.body.style.overflow = 'hidden';
-  setTimeout(() => modalEvent = getS('.gray').addEventListener('click', hideModal), 1000)
+  setTimeout(() => modalEvent = getS('.gray').addEventListener('click', hideModal), 1000);
 }
 
 const hideModal = () => {
