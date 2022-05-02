@@ -94,7 +94,7 @@ const getData = async () => {
 const showMovie = () => {
   if (action === 'search') getS('.movie-list').innerHTML = '';
   for (const movie of movieList) {
-    movie.Poster = movie.Poster === 'N/A' ? '/no-image.png' : movie.Poster;
+    movie.Poster = movie.Poster === 'N/A' ? 'no-image.png' : movie.Poster;
 
     const li = document.createElement('LI');
     const poster = `<picture class="movie__poster"><img scr="" alt="${movie.Title}"></picture>`;
